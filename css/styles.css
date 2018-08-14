@@ -1,3 +1,14 @@
-.counting {
+.projectOptions {
   display: none;
+}
+
+
+/* ----Index 2 HTML Styles---- */
+
+#high-stress, #medium-stress, #low-stress {
+  display: none;
+}
+
+body {
+  padding-left: 30px;
 }

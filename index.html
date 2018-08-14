@@ -1,40 +1,94 @@
-
 <!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Count By</title>
+    <title>Transportation Survey</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
     <link href="css/styles.css" rel="stylesheet" type="text/css">
     <script src="js/jquery-3.3.1.js"></script>
     <script src="js/scripts.js"></script>
   </head>
-
   <body>
-    <div class="container">
-      <form class="form-control" id="formInputs">
+
+<button type="submit" id="open-sentenceProject" class="btn btn-info">Sentence Scrambler Project</button>
+<button type="submit" id="open-countingProject" class="btn btn-success">Counting Project</button>
+<button type="submit" id="open-stressQuizProject" class="btn btn-warning"> Stress Quiz Project</button>
+
+<!-- SENTENCE devoweller -->
+    <div class="container projectOptions" id="sentenceProject">
+      <h1>Sentencer</h1>
+ <div id="questions" class="form">
+   <form id="formSentenceProject">
+     <div class="input" type="text">
+       <label for="#sentence">Write me a sentence:</label>
+       <input id="sentence" type="text" class="form-control">
+     </div>
+   </div>
+ <button id="goButton" type="submit" class="btn btn-primary">Show me my list!</button>
+</form>
+<ul id="outputSentence">
+ </ul>
+</div>
+</div>
+<!-- Counting: Count by i and cout to i and then total everything. -->
+    <div class="container projectOptions" id="countingProject">
+      <form id="formCountingProject">
+        <h1>what shall we count by?<br></h1>
+        <input type="number" min="1" id="countsBy">
+        <h1>what shall we count to?<br></h1>
+        <input type="number" min="1" id="countsTo">
+        <h1>heres our total running count<br></h1>
+        <input class="btn btn-primary" type="submit" placeholder="push me">
+      </form>
+      <ul id="outputCount">
+      </ul>
     </div>
 
-    <div class="counting">
-    <h1>what shall we count by?</h1>
-<input type="number" min="1" id="countsBy">
+<!-- Stess Quiz - combining checke boxes with if branching -->
+    <div class="container projectOptions" id="stressQuizProject">
+         <div class="jumbotron">
+           <h2>Personality Quiz</h2>
+         </div>
+         <form id="stress_quiz">
+           <div class="form-group">
+             <p>What symptoms of stress do you experience?</p>
+             <input type="checkbox" name="stress-symptom" value="sleep">Loss of Sleep.<br>
+             <input type="checkbox" name="stress-symptom" value="feeling">Feeling Overwhelmed.<br>
+             <input type="checkbox" name="stress-symptom" value="hair">Hair falling out.<br>
+             <input type="checkbox" name="stress-symptom" value="appetite">Lack of appetite.<br>
+             <input type="checkbox" name="stress-symptom" value="anxiety">Anxiety.<br>
+                <h3> Which if any medical conditions have you experienced in the last 6 months </h3>
+                <p> Please Check all that apply </p>
+                <input type="checkbox" name="stress-symptom" value="panic-attacks">Have you had any panic attacks?<br>
+                <input type="checkbox" name="stress-symptom" value="heart-attacks">have you had a heart attack?<br>
+                <input type="checkbox" name="stress-symptom" value="insomnia">Do/have you had Insomnia<br>
+                <input type="checkbox" name="stress-symptom" value="nausea">Do/have you had nausea heartburn indigestion?<br>
+                <input type="checkbox" name="stress-symptom" value="high-blood-pressure">Do have you had High Blood pressure?<br>
+           </div>
+          <button type="submit">Submit Survey</button>
+         </form>
+         <span id="high-stress">
+           <p><b>You scored <span class="scored"></span>. You have high-stress. Here are some recommendations based on your stress levels:</b></p>
+           <ul>
+             <li>baths</li>
+             <li>Xanex</li>
+             <li>breathe</li>
+           </ul>
+         </span>
+         <span id="medium-stress">
+           <p><b>You scored <span class="scored"></span>. You have medium-stress. Here are some recommendations based on your stress levels:</b></p>
+           <ul>
+             <li>breathe</li>
+           </ul>
+         </span>
+         <span id="low-stress">
+           <p><b>You scored <span class="scored"></span>. You have low-stress. Enjoy your life!</b></p>
+        </span>
+       </div>
 
-<h1>what shall we count to?</h1>
-<input type="number" min="1" id="countsTo">
-<h1>heres our total running count</h1>
-</div>
+<!-- next project -->
 
-<input type="text" id="sentenceInput" placeholder="sentence to scramble" >
-<input class="btn btn-primary" type="submit" value="Submit" placeholder="push me">
-</form>
-
-
-<ul id="output">
-
-</ul>
-<p> and thats it. </p>
 
   </body>
 </html>
